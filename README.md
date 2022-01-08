@@ -1,20 +1,18 @@
 # futurerestore
-[![CI Building](https://img.shields.io/github/workflow/status/m1stadev/futurerestore/CI)](https://github.com/m1stadev/futurerestore/actions?workflow=CI)
+[![CI Building](https://img.shields.io/github/workflow/status/RealiMuseum/futurerestore/CI)](https://github.com/RealiMuseum/futurerestore/actions?workflow=CI)
 
 __Make sure to read this page before continuing.__
 
-Latest **stable** compiled version can be found [here](https://github.com/m1stadev/futurerestore/releases).
+Latest **stable** compiled version can be found on your computer after you compile it. If you can't compile this, stop jailbreaking. Use iOS as it was intended and buy a Chromebook if you don't own a MacBook since you clearly struggle using Windows.
 
-For A12-A14, and WiFi-only iPad restores - use the latest beta build for your platform [here](https://nightly.link/m1stadev/futurerestore/workflows/ci/test).
+**There will never be pre-compiled beta builds for anything, including Windows.**
 
-**There are currently no pre-compiled beta builds for Windows.**
-
-__Only use if you are sure what you're doing.__
+__Only use if you can read English. This doesn't have translations AFAIK__
 
 ---
 
 # Support
-For support, join the [FutureRestore Support server](https://discord.com/invite/96wCSnwYVX) on Discord.
+For support, use your brain. This isn't hard to use. Stop being a dumbass and maybe this program will work. Learn to read and type correctly, it's not rocket science.
 
 # Features  
 * Supports the following downgrade methods:
@@ -41,10 +39,10 @@ For support, join the [FutureRestore Support server](https://discord.com/invite/
   Make sure these projects compile on your system (install it's dependencies):
   * [jssy](https://github.com/tihmstar/jssy);
   * [tsschecker](https://github.com/tihmstar/tsschecker);
-  * [idevicerestore](https://github.com/m1stadev/idevicerestore)
+  * [idevicerestore](https://github.com/RealiMuseum/idevicerestore)
 
 ## Report an issue
-You can do it [here](https://github.com/m1stadev/futurerestore/issues).
+There are never issues. Don't waste my time.
 
 ### Restoring on Windows 10
 1.  Try to restore the device, error `-8` occurs;

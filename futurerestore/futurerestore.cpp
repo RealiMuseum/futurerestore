@@ -519,7 +519,7 @@ void futurerestore::enterPwnRecovery(plist_t build_identity, string bootargs){
 
         debug("Waiting for device to disconnect...\n");
         cond_wait_timeout(&_client->device_event_cond, &_client->device_event_mutex, 10000);
-        /* retassure((_client->mode == &idevicerestore_modes[MODE_UNKNOWN] || (mutex_unlock(&_client->device_event_mutex),0)), "Device did not disconnect. Possibly invalid iBEC. Reset device and try again"); */
+        retassure((_client->mode == &idevicerestore_modes[MODE_UNKNOWN] || (mutex_unlock(&_client->device_event_mutex),0)), "Device did not disconnect. Possibly invalid iBEC. Reset device and try again"); */
         mutex_unlock(&_client->device_event_mutex);
     }
 
@@ -957,7 +957,7 @@ void futurerestore::doRestore(const char *ipsw){
         debug("Waiting for device to disconnect...\n");
         mutex_lock(&_client->device_event_mutex);
         cond_wait_timeout(&client->device_event_cond, &client->device_event_mutex, 10000);
-        /* retassure((client->mode == &idevicerestore_modes[MODE_UNKNOWN] || (mutex_unlock(&client->device_event_mutex),0)), "Device did not disconnect. Possibly invalid iBEC. Reset device and try again"); */
+        retassure((client->mode == &idevicerestore_modes[MODE_UNKNOWN] || (mutex_unlock(&client->device_event_mutex),0)), "Device did not disconnect. Possibly invalid iBEC. Reset device and try again"); */
         mutex_unlock(&client->device_event_mutex);
 
         debug("Waiting for device to reconnect...\n");
@@ -992,13 +992,13 @@ void futurerestore::doRestore(const char *ipsw){
         debug("Waiting for device to disconnect...\n");
         mutex_unlock(&client->device_event_mutex);
         cond_wait_timeout(&client->device_event_cond, &client->device_event_mutex, 10000);
-        /* retassure((client->mode == &idevicerestore_modes[MODE_UNKNOWN] || (mutex_unlock(&client->device_event_mutex),0)), "Device did not disconnect. Possibly invalid iBEC. Reset device and try again"); */
+        retassure((client->mode == &idevicerestore_modes[MODE_UNKNOWN] || (mutex_unlock(&client->device_event_mutex),0)), "Device did not disconnect. Possibly invalid iBEC. Reset device and try again"); */
         mutex_unlock(&client->device_event_mutex);
 
         debug("Waiting for device to reconnect...\n");
         mutex_unlock(&client->device_event_mutex);
         cond_wait_timeout(&client->device_event_cond, &client->device_event_mutex, 10000);
-        /* retassure((client->mode == &idevicerestore_modes[MODE_RECOVERY] || (mutex_unlock(&client->device_event_mutex),0)), "Device did not disconnect. Possibly invalid iBEC. Reset device and try again"); */
+        retassure((client->mode == &idevicerestore_modes[MODE_RECOVERY] || (mutex_unlock(&client->device_event_mutex),0)), "Device did not disconnect. Possibly invalid iBEC. Reset device and try again"); */
         mutex_unlock(&client->device_event_mutex);
     }
 

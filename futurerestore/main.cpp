@@ -20,7 +20,6 @@ extern "C"{
 };
 
 #include <libgeneral/macros.h>
-#include <img4tool/img4tool.hpp>
 #ifdef HAVE_LIBIPATCHER
 #include <libipatcher/libipatcher.hpp>
 #endif
@@ -100,7 +99,6 @@ int main_r(int argc, const char * argv[]) {
 #endif
     int err=0;
     printf("Version: " VERSION_COMMIT_SHA " - " VERSION_COMMIT_COUNT "\n");
-    printf("%s\n",tihmstar::img4tool::version());
 #ifdef HAVE_LIBIPATCHER
     printf("%s\n",libipatcher::version());
     printf("Odysseus for 32-bit support: yes\n");

@@ -28,8 +28,9 @@ esac
 
 # Checks the flags.
 CFLAGS+=" -DIDEVICERESTORE_NOMAIN=1 -DTSSCHECKER_NOMAIN=1"
-CXXFLAGS+=" -std=gnu++11"
-CFLAGS+=" -std=gnu11"
+// not everyone uses gnu lmao
+CXXFLAGS+=" -std=c++11"
+CFLAGS+=" -std=c11"
 
 AC_DEFUN([AX_UNPRECIOUS], [
     m4_define([_AC_PRECIOUS_VARS], m4_bpatsubst(_AC_PRECIOUS_VARS, [$1], []))
